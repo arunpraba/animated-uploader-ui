@@ -1,13 +1,58 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.app {
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: #f4f4f4;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.app-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 600px;
+}
+
+.wrapper {
+  margin: 50px 0;
+}
+
+.progress {
+  width: 80%;
+  height: 0.5rem;
+}
+
+.icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 50%;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.icon-container {
+  padding: 1em 1.2em;
+  border-radius: 0.5em;
+  transition: all 0.2s ease-in-out;
+}
+.icon-container {
+  box-shadow: -12px -12px 12px 0 rgba(255, 255, 255, 0.6),
+    12px 12px 12px 0 rgba(0, 0, 0, 0.03);
+  transform: scale(1.05);
+}
+.icon-container {
+  animation: raise-container 0.3s forwards 0.8s;
+}
+
+@keyframes raise-container {
+  from {
+    box-shadow: none;
+    transform: scale(1);
+  }
+  to {
+    box-shadow: -12px -12px 12px 0 rgba(255, 255, 255, 0.6),
+      12px 12px 12px 0 rgba(0, 0, 0, 0.03);
+    transform: scale(1.05);
+  }
 }
